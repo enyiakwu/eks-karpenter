@@ -26,7 +26,6 @@ export AWS_SECRET_ACCESS_KEY=xxxxxxxXXXXXXXxxxxxxxxXXXX/XXXXX
 2. **Initialize Terraform**
    
    ```sh
-   Copy code
    terraform init
 
 3. **Plan for the Terraform deployment**
