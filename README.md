@@ -11,6 +11,11 @@ This Terraform configuration deploys an EKS cluster with Karpenter, supporting b
 - Existing VPC and AWS S3 bucket for S3 bucket backend
 
 ## Usage
+Note: To use your own existing AWS account and credentials, run the following key configuration:
+   ```sh
+   export AWS_ACCESS_KEY_ID=AKXXXXXXXXXXXXXXXU
+   export AWS_SECRET_ACCESS_KEY=xxxxxxxXXXXXXXxxxxxxxxXXXX/XXXXX
+
 
 1. **Clone the repository**
 
