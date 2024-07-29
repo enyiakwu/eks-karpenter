@@ -1,0 +1,19 @@
+# define provisioner for Graviton and x86 arch instance types
+
+apiVersion: karpenter.sh/v1alpha5
+kind: Provisioner
+metadata:
+  name: node-provisioner
+spec:
+  requirements:
+    - key: "node.kubernetes.io/instance-type"
+      operator: In
+      values: ["c6g.large", "c5.large"]
+  limits:
+    resources:
+      cpu: "500"
+      memory: "1000Gi"
+  provider:
+    instanceProfile: "KarpenterInstanceProfile"
+  ttlSecondsAfterEmpty: 30
+
