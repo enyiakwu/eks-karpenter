@@ -4,19 +4,23 @@ GPU Slicing, also known as Multi-Instance GPU (MIG) for NVIDIA GPUs, allows a si
 ## Enabling GPU Slicing on EKS
 To enable GPU Slicing on EKS clusters, particularly those with Karpenter Autoscaler, follow these steps:
 
-**Verify GPU Support:** Ensure that your EKS nodes support NVIDIA GPUs that have MIG capabilities, such as the NVIDIA A100.
+**Verify GPU Support:**
+Ensure that your EKS nodes support NVIDIA GPUs that have MIG capabilities, such as the NVIDIA A100.
 
-**Install NVIDIA Drivers and GPU Operator:** Use the NVIDIA GPU Operator to manage and configure GPU resources on your Kubernetes cluster.
+**Install NVIDIA Drivers and GPU Operator:**
+Use the NVIDIA GPU Operator to manage and configure GPU resources on your Kubernetes cluster.
 
-**Configure MIG on GPU Nodes:** Set up MIG on GPU nodes to partition the GPU into multiple instances.
+**Configure MIG on GPU Nodes:** 
+Set up MIG on GPU nodes to partition the GPU into multiple instances.
 
-**Update Karpenter Configuration:** Modify Karpenter configuration to recognize and scale based on the availability of GPU slices.
+**Update Karpenter Configuration:** 
+Modify Karpenter configuration to recognize and scale based on the availability of GPU slices.
 
 ## An example Step-by-Step Implementation
-**Step 1:** Verify GPU Support
+**Step 1: Verify GPU Support**
 Ensure that your EKS nodes are using NVIDIA GPUs that support MIG (e.g., NVIDIA A100).
 
-**Step 2:** Install NVIDIA Drivers and GPU Operator
+**Step 2: Install NVIDIA Drivers and GPU Operator**
 **Install NVIDIA Device Plugin:** this can be done through a daemonset deployment
 
 Create a nvidia-device-plugin DaemonSet to expose GPUs to your Kubernetes cluster.
