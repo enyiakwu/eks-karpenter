@@ -74,16 +74,15 @@ helm install --wait --generate-name nvidia/gpu-operator
 
 ```sh
 sudo nvidia-smi -mig 1
-Create MIG instances. For example, to create 7 MIG instances on an A100 GPU:
 ```
+  Create MIG instances. For example, to create 7 MIG instances on an A100 GPU:
+  ```sh
+  sudo nvidia-smi mig -cgi 0,1,2,3,4,5,6 -C
+  ```
 
-```sh
-sudo nvidia-smi mig -cgi 0,1,2,3,4,5,6 -C
-```
-
-**Verify MIG configuration:**
-```sh
-nvidia-smi mig -lgi
-```
+  Verify MIG configuration:
+  ```sh
+  nvidia-smi mig -lgi
+  ```
 
 Step 4: Update Karpenter Configuration using provisioners and workloads yaml

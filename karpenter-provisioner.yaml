@@ -1,6 +1,6 @@
 # define provisioner for Graviton and x86 arch instance types
 
-apiVersion: karpenter.sh/v1alpha5
+apiVersion: karpenter.sh/v1
 kind: Provisioner
 metadata:
   name: node-provisioner
